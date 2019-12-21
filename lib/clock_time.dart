@@ -12,7 +12,7 @@ class ClockTime extends StatefulWidget {
 class _ClockTimeState extends State<ClockTime> {
   DateTime _dateTime = DateTime.now();
   Timer _timer;
-  String formattedDateTime;
+
 
   @override
   void initState() {
@@ -27,8 +27,6 @@ class _ClockTimeState extends State<ClockTime> {
     setState(() {
       _dateTime = DateTime.now();
 
-      //formattedDateTime = DateFormat('Hm').format(_dateTime);
-
       _timer = Timer(
         Duration(minutes: 1) -
             Duration(seconds: _dateTime.second) -
@@ -41,12 +39,53 @@ class _ClockTimeState extends State<ClockTime> {
 
   @override
   Widget build(BuildContext context) {
-    formattedDateTime = DateFormat('Hm').format(_dateTime);
+    final String hour = DateFormat('HH').format(_dateTime);
+    final String minute = DateFormat('mm').format(_dateTime);
 
     return Center(
-      child: Text(
-        formattedDateTime,
-        style: TextStyle(color: Colors.white, fontSize: ClockContainer.mediaQueryData.orientation == Orientation.portrait ? 65.0 : 110.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text(
+            hour,
+            style: TextStyle(
+                color: Colors.white,
+                fontSize: ClockContainer.mediaQueryData.orientation == Orientation.portrait ? 65.0 : 110.0,
+                shadows: [
+                  Shadow(
+                    blurRadius: 15.0,
+                    color: Colors.black
+                  )
+                ],
+            ),
+          ),
+          Text(
+            " : ",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: ClockContainer.mediaQueryData.orientation == Orientation.portrait ? 65.0 : 110.0,
+              shadows: [
+                Shadow(
+                    blurRadius: 15.0,
+                    color: Colors.black
+                )
+              ],
+            ),
+          ),
+          Text(
+            minute,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: ClockContainer.mediaQueryData.orientation == Orientation.portrait ? 65.0 : 110.0,
+              shadows: [
+                Shadow(
+                    blurRadius: 15.0,
+                    color: Colors.black
+                )
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

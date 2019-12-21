@@ -6,7 +6,7 @@ class FlawClock extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-        theme: ThemeData.dark(),
+        theme: ThemeData.light(),
         darkTheme: ThemeData.dark(),
         debugShowCheckedModeBanner: false,
         home: ClockContainer()

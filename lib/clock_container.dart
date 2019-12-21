@@ -14,6 +14,7 @@ class ClockContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
 
+
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       body: SafeArea(
@@ -29,6 +30,14 @@ class ClockContainer extends StatelessWidget {
                 AnimatedOrb(),
                 ClockSeconds(),
                 ClockTime(),
+                Positioned(
+                  left: mediaQueryData.size.width / 2 - 50,
+                  bottom: 100.0,
+                  child: Text(
+                    "",
+                    style: TextStyle(color: Colors.white, fontSize: 40.0),
+                  ),
+                )
               ],
             ),
           ),

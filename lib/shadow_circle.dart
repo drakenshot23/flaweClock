@@ -12,10 +12,10 @@ class ShadowCircle extends StatelessWidget {
             color: Colors.transparent,
             boxShadow: [
               BoxShadow(
-                  color: Colors.black,
+                  color: Colors.black87,
                   offset: Offset.zero,
                   blurRadius: 10,
-                  spreadRadius: 3
+                  spreadRadius: 1
               )
             ],
             shape: BoxShape.circle

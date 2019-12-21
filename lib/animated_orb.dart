@@ -8,14 +8,16 @@ class AnimatedOrb extends StatefulWidget {
 }
 
 class _AnimatedOrbState extends State<AnimatedOrb> {
-  String _animationName = "Aura2";
+  String _firstAnimationName = "Aura";
+  String _secondAnimationName = "Aura2";
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: FlareActor("assets/animated_orb.flr",
           alignment: Alignment.center,
           fit: BoxFit.contain,
-          animation: _animationName),
+          animation: _firstAnimationName),
     );
   }
 }
