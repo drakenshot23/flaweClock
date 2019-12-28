@@ -35,14 +35,11 @@ class _ClockSecondsState extends State<ClockSeconds> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: SizedBox.expand(
-        child: CustomPaint(
-          painter: ClockSecondsPainter(
-              color: Colors.blueAccent,
-              completedPercent: completedPercent,
-              arcWidth: 10.0
-          ),
+    return SizedBox.expand(
+      child: CustomPaint(
+        painter: ClockSecondsPainter(
+            completedPercent: completedPercent,
+            arcWidth: 10.0
         ),
       ),
     );

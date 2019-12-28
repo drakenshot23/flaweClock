@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flawe_clock/clock_container.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -16,7 +15,6 @@ class _ClockTimeState extends State<ClockTime> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     setState(() {
       _updateTime();
@@ -43,50 +41,10 @@ class _ClockTimeState extends State<ClockTime> {
     final String minute = DateFormat('mm').format(_dateTime);
 
     return Center(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            hour,
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: ClockContainer.mediaQueryData.orientation == Orientation.portrait ? 65.0 : 110.0,
-                shadows: [
-                  Shadow(
-                    blurRadius: 15.0,
-                    color: Colors.black
-                  )
-                ],
-            ),
-          ),
-          Text(
-            " : ",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: ClockContainer.mediaQueryData.orientation == Orientation.portrait ? 65.0 : 110.0,
-              shadows: [
-                Shadow(
-                    blurRadius: 15.0,
-                    color: Colors.black
-                )
-              ],
-            ),
-          ),
-          Text(
-            minute,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: ClockContainer.mediaQueryData.orientation == Orientation.portrait ? 65.0 : 110.0,
-              shadows: [
-                Shadow(
-                    blurRadius: 15.0,
-                    color: Colors.black
-                )
-              ],
-            ),
-          ),
-        ],
-      ),
+      child: Text(
+        hour + ' : ' + minute,
+        style: Theme.of(context).textTheme.title,
+      )
     );
   }
 }
