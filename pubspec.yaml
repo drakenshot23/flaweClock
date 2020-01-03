@@ -45,6 +45,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/animated_orb.flr
+    - assets/weather_animation.flr
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -59,16 +60,6 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-   - family: Open Sans
-     fonts:
-       - asset: fonts/open_sans/OpenSans-Regular.ttf
-       - asset: fonts/open_sans/OpenSans-Bold.ttf
-         style: normal
-   - family: Titillium Web
-     fonts:
-       - asset: fonts/titillium_web/TitilliumWeb-Regular.ttf
-       - asset: fonts/titillium_web/TitilliumWeb-Bold.ttf
-         style: normal
    - family: Varela Round
      fonts:
        - asset: fonts/varela_round/VarelaRound-Regular.ttf
