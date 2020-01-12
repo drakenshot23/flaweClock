@@ -5,15 +5,17 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
+import 'package:flawe_clock/flaw_clock.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_clock_helper/customizer.dart';
+import 'package:flutter_clock_helper/model.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:flawe_clock/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(DigitalClock());
+    await tester
+        .pumpWidget(ClockCustomizer((ClockModel model) => FlawClock(model)));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

@@ -6,9 +6,7 @@ class ClockCircle extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox.expand(
       child: CustomPaint(
-        painter: ClockCirclePainter(
-            color: Colors.grey[900]
-        ),
+        painter: ClockCirclePainter(color: Colors.grey[900]),
       ),
     );
   }
