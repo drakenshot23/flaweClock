@@ -19,9 +19,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  flutter_clock_helper:
+    path: ../flutter_clock_helper
   cupertino_icons: ^0.1.2
   intl: ^0.16.0
   flare_flutter: ^1.8.3

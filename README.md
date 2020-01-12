@@ -6,4 +6,4 @@ A new Flutter Awesome Clock.
 
 - Animated Orb created by Daniil Lisnyak on rive.app
 - Weather animations by AmirHossein SamadiPour @SamadiPour on rive.app
--Font : Varela Round (OFL)
+- Font : Varela Round (OFL)
