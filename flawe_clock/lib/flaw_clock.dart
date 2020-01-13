@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clock_helper/model.dart';
+
 import 'clock_container.dart';
 
 class FlawClock extends StatefulWidget {
@@ -44,9 +45,9 @@ class _FlawClockState extends State<FlawClock> {
   @override
   Widget build(BuildContext context) {
     final double clockFontSize =
-        (MediaQuery.of(context).size.width / (5 / 3)) / 4.3;
+        (MediaQuery.of(context).size.width / (5 / 3)) / 5.3;
     final double temperatureFontSize =
-        (MediaQuery.of(context).size.width / (5 / 3)) / 6;
+        (MediaQuery.of(context).size.width / (5 / 3)) / 7;
 
     final ThemeData theme = ThemeData(
         brightness: Brightness.dark,
